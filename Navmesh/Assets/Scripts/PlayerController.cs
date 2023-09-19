@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour
     rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
   }
 
-  private void GameOver()
+  private void OnTriggerEnter(Collider collision)
   {
-    if (collision.gameObjectt.tag == "Enemy")
+    if (collision.gameObject.tag == "Enemy")
     {
       Debug.Log("Game Over!");
     }
